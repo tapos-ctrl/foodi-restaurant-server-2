@@ -12,7 +12,6 @@ const port = 5000
 
 app.use(cors(
   {
-    origin:'*',
     credentials: true
   }
 ))
@@ -196,11 +195,6 @@ try {
         else{
           return res.send(findData)
         }
-        
-        // else if(findData.status =='conform' ){
-        //   const result = await orderCollection.insertOne(foodData)
-        //   return res.send(result)
-        // }
         
       })
       
