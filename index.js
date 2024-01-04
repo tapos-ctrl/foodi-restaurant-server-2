@@ -12,7 +12,7 @@ const port = 5000
 
 app.use(cors(
   {
-    origin:['http://localhost:5173'],
+    origin:'*',
     credentials: true
   }
 ))
@@ -120,7 +120,7 @@ try {
  
 
     try {
-      app.get('/allFoods', verifiedToken, async(req,res) =>{
+      app.get('/allFoods', async(req,res) =>{
 
         
         let searchText = req.query.search;
