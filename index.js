@@ -234,9 +234,10 @@ try {
     try {
       app.get('/ordersFoods', verifiedToken, async(req,res) =>{
         console.log('quary emaill',req.user.email)
-        const emails = req.query.email
+        const emails = req?.query?.email
+        console.log(emails, req.user.email)
         console.log(emails)
-        if(req.user.email !== emails){
+        if(req?.user?.email != emails){
           return res.status(403).send({massage:'Forbidden access'})
 
 
