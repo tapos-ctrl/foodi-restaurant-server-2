@@ -11,7 +11,7 @@ const port = 5000
 
 
 app.use(cors({
-  origin:['https://frodi-restaurant.web.app/allFood']
+  origin:['https://frodi-restaurant.web.app/allFood','https://frodi-restaurant.web.app/order']
 }))
 
 
