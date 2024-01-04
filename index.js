@@ -232,7 +232,7 @@ try {
 
 
     try {
-      app.get('/ordersFoods', verifiedToken, async(req,res) =>{
+      app.get('/ordersFoods', async(req,res) =>{
         console.log('quary emaill',req.user.email)
         const emails = req?.query?.email
         console.log(emails, req.user.email)
