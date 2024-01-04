@@ -236,15 +236,7 @@ try {
 
     try {
       app.get('/ordersFoods', async(req,res) =>{
-        console.log('quary emaill',req.user.email)
         const emails = req?.query?.email
-        console.log(emails, req.user.email)
-        console.log(emails)
-        if(req?.user?.email !== emails){
-          return res.status(403).send({massage:'Forbidden access'})
-
-
-        }
         const query = { email:emails }
         const result = await orderCollection.find(query).toArray()
         res.send(result)
